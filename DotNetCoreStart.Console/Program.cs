@@ -1,4 +1,5 @@
 ﻿using System;
+using DotNetCoreStart.Domain.Entities;
 
 namespace DotNetCoreStart.Console
 {
@@ -6,7 +7,11 @@ namespace DotNetCoreStart.Console
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
+            Customer customer = new Customer();
+            System.Console.WriteLine("Digite o nome do cliente: ");
+            customer.Name = System.Console.ReadLine();
+
+            System.Console.WriteLine($"O cliente {customer.Name} possui o Id {customer.Id}");
         }
     }
 }
