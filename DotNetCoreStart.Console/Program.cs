@@ -12,6 +12,10 @@ namespace DotNetCoreStart.Console
             customer.Name = System.Console.ReadLine();
 
             System.Console.WriteLine($"O cliente {customer.Name} possui o Id {customer.Id}");
+
+            Order order = new Order();
+
+            order.Customer = customer;
         }
     }
 }
